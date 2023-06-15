@@ -23,7 +23,9 @@ function emailMerge() {
 
       // email information
 
-      MailApp.sendEmail(emailacct, subject, message);
+      var body = "Dear " + name + ",\n" + message;
+
+      MailApp.sendEmail(emailacct, subject, body);
 
       var cell = emailsheet.getRange(i+1,4); 
       Logger.log(cell);
